@@ -1,0 +1,154 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <link href="reservation.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="#about" class="nav-link aboutLink">О нас</a>
+            <a href="catalog.html" class="nav-link catalogLink">Каталог</a>
+            <a href="index.html" class="freedom-link">Свобода<p class="logoSmallText">Винотека</p></a>
+            <a href="#partners" class="nav-link partnersLink">Партнерам</a>
+            <a href="reservation.html" class="nav-link reservationLink">Бронь столика</a>
+        </nav>
+    </header>
+
+    <div class="container d-flex justify-content-center">
+        <div class="col-md-10">
+            <input type="text" class="form-control input-field" placeholder="Ваше имя">
+            <input type="text" class="form-control input-field" placeholder="Ваш номер">
+            <button class="btn btn-primary submit-button d-block mx-auto" id="submit">Готово</button>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog custom-modal">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h2 class="modal-title">
+                        <p>Отлично!</p>
+                        Наш администратор уже звонит вам для уточнения информации. До встречи в Свободе!
+                    </h2>
+                    <svg width="68" height="104" viewBox="0 0 68 104" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" class="backgroundImageLeft">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M63.978 0H5.3171C-5.01049 38.8029 -2.06072 54.4805 30.0434 63.7767V97.5409C12.8896 98.128 8.21604 98.3935 8.21604 101.634C8.21604 104.874 59.8854 104.703 59.8854 101.634C59.8854 98.564 59.2767 98.4414 37.5465 97.5409V63.7767C67.5628 56.0297 72.32 41.1715 63.978 0ZM47.7836 17.0525C41.1835 17.5622 39.2573 18.5872 39.2573 21.8272C39.2573 25.0672 59.7546 28.5308 60.4026 22.6799C61.0505 16.8289 57.1626 18.5872 57.1626 18.5872C56.8581 21.6583 54.9456 23.362 52.2173 23.362C49.489 23.362 47.4911 20.8495 47.7836 17.0525ZM7.53954 21.8272C7.53954 18.5872 9.46568 17.5622 16.0658 17.0525C15.7733 20.8495 17.7712 23.362 20.4995 23.362C23.2278 23.362 25.1404 21.6583 25.4448 18.5872C25.4448 18.5872 29.3327 16.8289 28.6848 22.6799C28.0368 28.5308 7.53954 25.0672 7.53954 21.8272Z"
+                                fill="#D4B0B8" />
+                        </svg>
+                        <svg width="68" height="104" viewBox="0 0 68 104" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            class="backgroundImageRight">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M3.65953 0H62.3205C72.6481 38.8029 69.6983 54.4805 37.5942 63.7767V97.5409C54.748 98.128 59.4215 98.3935 59.4215 101.634C59.4215 104.874 7.75215 104.703 7.75215 101.634C7.75215 98.564 8.36091 98.4414 30.0911 97.5409V63.7767C0.0748003 56.0297 -4.68247 41.1715 3.65953 0ZM19.8539 17.0525C26.4541 17.5622 28.3802 18.5872 28.3802 21.8272C28.3802 25.0672 7.88299 28.5308 7.23502 22.6799C6.58704 16.8289 10.475 18.5872 10.475 18.5872C10.7794 21.6583 12.692 23.362 15.4203 23.362C18.1485 23.362 20.1465 20.8495 19.8539 17.0525ZM60.098 21.8272C60.098 18.5872 58.1719 17.5622 51.5717 17.0525C51.8643 20.8495 49.8663 23.362 47.1381 23.362C44.4098 23.362 42.4972 21.6583 42.1928 18.5872C42.1928 18.5872 38.3048 16.8289 38.9528 22.6799C39.6008 28.5308 60.098 25.0672 60.098 21.8272Z"
+                                fill="#D4B0B8" />
+                        </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="containerFooter">
+            <div class="row">
+                <div class="col">
+                    Основное
+                    <div class="textFooter">
+                        <a href="index.html" class="linkFooter">
+                            На главную
+                        </a>
+                    </div>
+                    <div class="textFooter">
+                        <a href="#about" class="linkFooter">
+                            О нас
+                        </a>
+                    </div>
+                    <div class="textFooter">
+                        <a href="catalog.html" class="linkFooter">
+                            Каталог
+                        </a>
+                    </div>
+                    <div class="textFooter">
+                        <a href="#" class="linkFooter">
+                            Партнерам
+                        </a>
+                    </div>
+                    <div class="textFooter">
+                        <a href="/reservation.html" class="linkFooter">
+                            Забронировать столик
+                        </a>
+                    </div>
+                </div>
+                <div class="col">
+                    Информация
+                    <div class="textFooter">
+                        <a href="#" class="linkFooter">
+                            Оплата
+                        </a>
+                    </div>
+                    <div class="textFooter">
+                        <a href="#" class="linkFooter">
+                            Доставка
+                        </a>
+                    </div>
+                    <div class="textFooter">
+                        <a href="#" class="linkFooter">
+                            Условия обмена и возврата
+                        </a>
+                    </div>
+                    <div class="textFooter">
+                        <a href="#" class="linkFooter">
+                            Лицензия
+                        </a>
+                    </div>
+                    <div class="textFooter">
+                        <a href="#" class="linkFooter">
+                            Юридическая информация
+                        </a>
+                    </div>
+                </div>
+                <div class="col">
+                    Контакты
+                    <div class="textFooter">
+                        <span class="underlineTextFooter">
+                            Адрес:
+                        </span>Санкт-Петербург, улица Жуковского, 15
+                    </div>
+                    <div class="textFooter">
+                        <span class="underlineTextFooter">
+                            Наш номер:
+                        </span>+7(911)262-12-22
+
+                    </div>
+                    <div class="textFooter">
+                        <span class="underlineTextFooter">График работы:</span> пн-вс с 12 до 23
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    // Получаем элементы модального окна и кнопки
+    const modal = document.getElementById("myModal");
+    const btn = document.getElementById("submit");
+
+    // Открываем модальное окно при нажатии на кнопку
+    btn.onclick = function () {
+        $('#myModal').modal('show');
+    }
+
+</script>
+
+</html>

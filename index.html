@@ -1,0 +1,165 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <link href="index.css" rel="stylesheet">
+    <link href="https://github.com/agrorural/Intranet/blob/master/assets/fonts/Ubuntu-Bold.woff2" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Viaoda+Libre&family=Viga&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog custom-modal">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h2 class="modal-title">
+                        А тебе уже исполнилось 18 лет?
+                    </h2>
+                    <button type="button" class="btn btnAgree">К свободе!</button>
+                    <svg width="172" height="264" viewBox="0 0 172 264" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="model-background">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M9.28957 0H158.198C184.414 98.4997 176.926 138.297 95.4314 161.895V247.604C138.976 249.094 150.839 249.768 150.839 257.993C150.839 266.217 19.6785 265.784 19.6785 257.993C19.6785 250.201 21.2238 249.89 76.385 247.604V161.895C0.189878 142.229 -11.8863 104.512 9.28957 0ZM50.3983 43.2874C67.1526 44.5813 72.042 47.1832 72.042 55.4078C72.042 63.6324 20.0106 72.4246 18.3657 57.5722C16.7208 42.7198 26.5903 47.1832 26.5903 47.1832C27.3631 54.979 32.218 59.3037 39.1436 59.3037C46.0693 59.3037 51.1409 52.9259 50.3983 43.2874ZM152.556 55.4078C152.556 47.1832 147.667 44.5813 130.913 43.2874C131.655 52.9259 126.584 59.3037 119.658 59.3037C112.732 59.3037 107.877 54.979 107.105 47.1832C107.105 47.1832 97.2353 42.7198 98.8801 57.5722C100.525 72.4246 152.556 63.6324 152.556 55.4078Z"
+                            fill="#D4B0B8" />
+                    </svg>
+                    <button type="button" class="btn btnCancel">Вернусь позже</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <nav class="navbar">
+            <a href="#about" class="nav-link aboutLink">О нас</a>
+            <a href="catalog.html" class="nav-link catalogLink">Каталог</a>
+            <a href="index.html" class="freedom-link">Свобода<p class="logoSmallText">Винотека</p></a>
+            <a href="#partners" class="nav-link partnersLink">Партнерам</a>
+            <a href="reservation.html" class="nav-link reservationLink">Бронь столика</a>
+        </nav>
+    </header>
+
+    <div class="containerDescription">
+        <p class="description">
+            Почувствуйте свободу вкуса и выбора в нашей винотеке!
+        </p>
+    </div>
+
+    <div class="container">
+        <img src="images/index/image.png" class="image" id="image">
+        <img src="images/index/image1.png" class="image" id="image1">
+        <img src="images/index/image2.png" class="image" id="image2">
+        <img src="images/index/image3.png" class="image" id="image3">
+        <img src="images/index/image4.png" class="image" id="image4">
+        <img src="images/index/image5.png" class="image" id="image5">
+    </div>
+
+    <footer>
+        <div class="containerFooter">
+            <div class="row">
+                <div class="col">
+                    Основное
+                    <div class="textFooter">
+                        <a href="index.html" class="linkFooter">
+                            На главную
+                        </a>
+                    </div>
+                    <div class="textFooter">
+                        <a href="#about" class="linkFooter">
+                            О нас
+                        </a>
+                    </div>
+                    <div class="textFooter">
+                        <a href="catalog.html" class="linkFooter">
+                            Каталог
+                        </a>
+                    </div>
+                    <div class="textFooter">
+                        <a href="#" class="linkFooter">
+                            Партнерам
+                        </a>
+                    </div>
+                    <div class="textFooter">
+                        <a href="/reservation.html" class="linkFooter">
+                            Забронировать столик
+                        </a>
+                    </div>
+                </div>
+                <div class="col">
+                    Информация
+                    <div class="textFooter">
+                        <a href="#" class="linkFooter">
+                            Оплата
+                        </a>
+                    </div>
+                    <div class="textFooter">
+                        <a href="#" class="linkFooter">
+                            Доставка
+                        </a>
+                    </div>
+                    <div class="textFooter">
+                        <a href="#" class="linkFooter">
+                            Условия обмена и возврата
+                        </a>
+                    </div>
+                    <div class="textFooter">
+                        <a href="#" class="linkFooter">
+                            Лицензия
+                        </a>
+                    </div>
+                    <div class="textFooter">
+                        <a href="#" class="linkFooter">
+                            Юридическая информация
+                        </a>
+                    </div>
+                </div>
+                <div class="col">
+                    Контакты
+                    <div class="textFooter">
+                        <span class="underlineTextFooter">
+                            Адрес:
+                        </span>Санкт-Петербург, улица Жуковского, 15
+                    </div>
+                    <div class="textFooter">
+                        <span class="underlineTextFooter">
+                            Наш номер:
+                        </span>+7(911)262-12-22
+
+                    </div>
+                    <div class="textFooter">
+                        <span class="underlineTextFooter">График работы:</span> пн-вс с 12 до 23
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<script>
+    localStorage.clear();
+
+    $(document).ready(function () {
+        $('#myModal').modal('show');
+    });
+    $('.btnAgree').on('click', function () {
+        $('#myModal').modal('hide');
+    });
+
+    // Возврат на предыдущую страницу при нажатии "Вернусь позже"
+    $('.btnCancel').on('click', function () {
+        // window.history.back(); // Возврат на предыдущую страницу
+    });
+</script>
+
+</html>

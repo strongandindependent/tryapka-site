@@ -1,0 +1,108 @@
+body {
+    font-family: "ViaodaLibre-Regular";
+    background-color: #FBF5EE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.reservationLink {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="320" height="121" viewBox="0 0 320 121" fill="none"><path d="M3.93246 61.4613C7.18215 55.435 11.4259 50.6044 16.6769 47.2061C19.2872 45.6502 30.1652 40.2501 32.1768 37.7187C35.0594 34.0913 40.2127 33.7557 43.2373 30.3503C44.9891 28.3779 48.037 28.941 50.1261 27.2681C52.8187 25.112 57.6926 22.8492 60.9187 22.5485C64.2359 22.2393 66.3884 19.081 70.0273 19.081C74.3745 19.081 79.3006 16.9515 83.6137 16.047C89.4091 14.8315 95.412 14.7723 101.257 13.6871C106.808 12.6566 111.633 10.9065 116.986 9.16015C122.937 7.21892 129.151 6.50655 135.165 4.34421C146.835 0.148703 161.289 0.876724 173.36 0.876724C186.142 0.876724 198.851 -0.108399 211.632 0.00985379C218.228 0.0708837 225.042 0.544994 231.61 1.31016C236.173 1.84184 240.872 1.23094 245.387 2.22519C256.553 4.68402 267.903 7.37556 278.607 12.146C287.746 16.2192 296.636 20.6177 305.703 24.9565C310.847 27.4179 315.946 30.997 318.715 37.3334C321.702 44.1658 318.881 54.3939 316.343 60.6908C312.169 71.0449 301.471 74.726 293.686 79.2322C284.669 84.4518 275.439 89.1388 266.437 94.3061C259.509 98.2825 251.491 98.1374 244.392 101.386C238.049 104.288 231.118 106.109 224.568 108.369C215.53 111.487 206.446 112.625 197.242 114.822C185.601 117.6 172.889 119.638 161.037 119.638C147.634 119.638 134.458 120.872 121.005 119.831C108.021 118.825 94.8213 119.638 81.8149 119.638C67.6887 119.638 53.5344 119.961 39.4101 119.638C29.6655 119.415 17.5949 114.599 9.788 106.924C-0.22221 97.0828 -3.22586 74.7359 3.93246 61.4613Z" fill="%237B0D1E" fill-opacity="1"/></svg>');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    color: #D4B0B8;
+}
+
+/*  */
+.container {
+    background-color: white;
+    border-radius: 15px;
+    margin-top: 69px;
+    margin-bottom: 50px;
+    width: 578px;
+}
+
+.input-field {
+    font-size: 15px;
+    height: 60px;
+    border: 7px solid #D4B0B8;
+    border-radius: 12px;
+    margin: 62px 62px 0px 0px;
+    /* border-color: #D4B0B8;  */
+}
+.input-field:focus {
+    border: 7px solid #7B0D1E;
+    box-shadow: none;
+    
+}
+.submit-button {
+    border: none;
+    width: 244px;
+    margin: 62px 0px 62px 0px;
+    font-size: 24px;
+    background-color: #7B0D1E;
+}
+
+.submit-button:hover {
+    background-color: #7B0D1E;
+    transform: scale(1.1); /* Увеличение при наведении */
+}
+.submit-button:active {
+    background-color: #7B0D1E;
+    outline: none;
+}
+
+.submit-button:focus {
+    outline: none; /* Убираем встроенное выделение */
+}
+
+
+/* Скрыть модальное окно по умолчанию */
+#myModal {
+    display: none;
+}
+
+.modal-content {
+    color: #FBF5EE;
+    font-family: ViaodaLibre-Regular;
+    margin-left: 0;
+    background-color: #7B0D1E;
+    border-radius: 40px;
+    position: absolute;
+}
+
+.model-background {
+    margin-top: 30px;
+    margin-top: 0;
+}
+
+.modal-title {
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
+.modal-body {
+    margin-top: 40px;
+    text-align: center; /* Центрируем содержимое */
+}
+
+.custom-modal {
+    max-width: 924px; 
+    max-height: 316px;
+    width: 100%;
+}
+
+.backgroundImageLeft {
+    position: relative;
+    overflow: hidden;
+    margin-right: 400px;
+}
+
+.backgroundImageRight {
+    position: relative;
+    overflow: hidden;
+}
