@@ -26,8 +26,8 @@
 
     <div class="container d-flex justify-content-center">
         <div class="col-md-10">
-            <input type="text" class="form-control input-field" placeholder="Ваше имя">
-            <input type="text" class="form-control input-field" placeholder="Ваш номер">
+            <input type="text" id="name" class="form-control input-field" placeholder="Ваше имя">
+            <input type="text" id="phone" class="form-control input-field" placeholder="Ваш номер">
             <button class="btn btn-primary submit-button d-block mx-auto" id="submit">Готово</button>
         </div>
     </div>
@@ -140,15 +140,35 @@
     </footer>
 </body>
 <script>
-    // Получаем элементы модального окна и кнопки
-    const modal = document.getElementById("myModal");
     const btn = document.getElementById("submit");
 
-    // Открываем модальное окно при нажатии на кнопку
-    btn.onclick = function () {
-        $('#myModal').modal('show');
+    btn.onclick = async function () {
+        const name = document.getElementById("name").value.trim();
+        const phone = document.getElementById("phone").value.trim();
+
+        if (!name || !phone) {
+            alert("Пожалуйста, заполните имя и номер");
+            return;
+        }
+
+        btn.disabled = true;
+        try {
+            const r = await fetch("/api/send", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ "Имя": name, "Номер": phone })
+            });
+            if (r.ok) {
+                $('#myModal').modal('show');
+                document.getElementById("name").value = "";
+                document.getElementById("phone").value = "";
+            } else {
+                alert("Не получилось отправить, попробуйте ещё раз");
+            }
+        } catch (e) {
+            alert("Не получилось отправить, проверьте интернет");
+        }
+        btn.disabled = false;
     }
-
 </script>
-
 </html>
