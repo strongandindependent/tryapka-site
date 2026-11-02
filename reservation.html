@@ -142,12 +142,30 @@
 <script>
     const btn = document.getElementById("submit");
 
+    // Проверяет номер и приводит к виду +79123456789. Если номер неправильный, вернёт null
+    function normalizePhone(raw) {
+        let digits = raw.replace(/\D/g, "");
+        if (digits.length === 11 && (digits[0] === "7" || digits[0] === "8")) {
+            digits = digits.slice(1);
+        }
+        if (digits.length !== 10 || digits[0] !== "9") {
+            return null;
+        }
+        return "+7" + digits;
+    }
+
     btn.onclick = async function () {
         const name = document.getElementById("name").value.trim();
-        const phone = document.getElementById("phone").value.trim();
+        const phoneRaw = document.getElementById("phone").value.trim();
 
-        if (!name || !phone) {
-            alert("Пожалуйста, заполните имя и номер");
+        if (!name) {
+            alert("Пожалуйста, введите имя");
+            return;
+        }
+
+        const phone = normalizePhone(phoneRaw);
+        if (!phone) {
+            alert("Введите российский мобильный номер, например +7 912 345-67-89");
             return;
         }
 
