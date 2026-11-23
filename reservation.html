@@ -140,52 +140,49 @@
     </footer>
 </body>
 <script>
+    // Находим кнопку отправки по id="submit"
     const btn = document.getElementById("submit");
 
-    // Проверяет номер и приводит к виду +79123456789. Если номер неправильный, вернёт null
-    function normalizePhone(raw) {
-        let digits = raw.replace(/\D/g, "");
-        if (digits.length === 11 && (digits[0] === "7" || digits[0] === "8")) {
-            digits = digits.slice(1);
-        }
-        if (digits.length !== 10 || digits[0] !== "9") {
-            return null;
-        }
-        return "+7" + digits;
-    }
-
+    // Обработчик клика по кнопке (async, чтобы использовать await для запроса)
     btn.onclick = async function () {
+        // Берём значения полей и убираем пробелы по краям
         const name = document.getElementById("name").value.trim();
-        const phoneRaw = document.getElementById("phone").value.trim();
+        const phone = document.getElementById("phone").value.trim();
+        
 
+        // Проверка: имя не должно быть пустым
         if (!name) {
             alert("Пожалуйста, введите имя");
-            return;
+            return; // прерываем отправку
         }
 
-        const phone = normalizePhone(phoneRaw);
-        if (!phone) {
-            alert("Введите российский мобильный номер, например +7 912 345-67-89");
-            return;
-        }
-
+        // Блокируем кнопку, чтобы пользователь не нажал дважды
         btn.disabled = true;
+
         try {
+            // Отправляем POST-запрос на сервер с данными в формате JSON
             const r = await fetch("/api/send", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ "Имя": name, "Номер": phone })
             });
+
             if (r.ok) {
+                // Сервер ответил успешно: показываем модальное окно (Bootstrap + jQuery)
                 $('#myModal').modal('show');
+                // Очищаем поля формы
                 document.getElementById("name").value = "";
                 document.getElementById("phone").value = "";
             } else {
+                // Сервер ответил ошибкой (например, 400 или 500)
                 alert("Не получилось отправить, попробуйте ещё раз");
             }
         } catch (e) {
+            // Сам запрос не дошёл: нет интернета, сервер недоступен и т.п.
             alert("Не получилось отправить, проверьте интернет");
         }
+
+        // Разблокируем кнопку после завершения (при успехе и при ошибке)
         btn.disabled = false;
     }
 </script>
